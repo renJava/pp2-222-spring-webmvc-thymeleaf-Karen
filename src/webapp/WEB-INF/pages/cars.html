@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="ru">
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>All Cars</title>
-        <style>
-            table {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
+<head>
+    <meta charset="UTF-8">
+    <title>All cars</title>
+    <style>
+        caption {
+            font-size: 2em;
+            font-variant-caps: titling-caps;
+            padding-bottom: 0.5em;
+        }
 
-            th {
-                text-align: left;
-                padding: 12px;
-                background-color: #f2f2f2;
-            }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
 
-            td {
-                text-align: left;
-                padding: 12px;
-            }
+        th {
+            font-size: 1.2em;
+            padding: 1.5em;
+            background-color: #f2f2f2;
+            border-bottom-width: 0.25em;
+            border-top-width: 0.25em;
+        }
+
+        td {
+            text-align: left;
+            padding: 1em;
+        }
 
         </style>
     </head>
-    <body>
-        <table th:border="3">
-            <tr>
-                <th>Model</th>
-                <th>Year</th>
-                <th>Country</th>
-            </tr>
+<body>
+<table th:border="3em">
+    <caption>Car table</caption>
+    <tr>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Country</th>
+    </tr>
 
-            <tr th:each="car : ${cars}">
-                <td th:utext="${car.Model}">model</td>
-                <td th:utext="${car.Year}">year</td>
-                <td th:utext="${car.Country}">country</td>
-            </tr>
-        </table>
+    <tr th:each="car : ${cars}">
+        <td th:utext="${car.model}">model</td>
+        <td th:utext="${car.year}">year</td>
+        <td th:utext="${car.country}">country</td>
+    </tr>
+</table>
 
-    </body>
-</html>
+</body>

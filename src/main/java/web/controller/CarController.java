@@ -14,11 +14,10 @@ public class CarController {
         this.carService = carImpl;
     }
 
-
-
     @GetMapping(value = "/cars")
-    public String car(Model model, @RequestParam(value = "count", defaultValue = "10") int count) {
+    public String car(Model model, @RequestParam(value = "count", defaultValue = "2") int count) {
         model.addAttribute("cars", carService.getCarsByCount(count));
         return "cars";
     }
+
 }
