@@ -12,6 +12,7 @@ public class CarServiceImpl implements CarService {
     String rus = "Россия";
     {
         car = new ArrayList<>();
+
         car.add(new Car("Нива", 2011, rus));
         car.add(new Car("Maybach", 2013, "Германия"));
         car.add(new Car("Aurus Senat", 2020, rus));
